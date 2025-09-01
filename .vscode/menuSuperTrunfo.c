@@ -85,17 +85,17 @@ int main()
     {
         printf("Empate!!!");
     }
-    else if ((escolha_atributo != 1) || 
-             (escolha_atributo != 2) ||
-             (escolha_atributo != 3) || 
-             (escolha_atributo != 4) ||
-             (escolha_atributo != 5))
+    else if (((escolha_atributo == 1) && (populacao1 < populacao2)) ||
+        ((escolha_atributo == 2) && (area1 < area2)) ||
+        ((escolha_atributo == 3) && (pib1 < pib2)) ||
+        ((escolha_atributo == 4) && (pontos_tur1 < pontos_tur2)) ||
+        ((escolha_atributo == 5) && (densidade_demografica1 > densidade_demografica2)))
     {
-        printf("\Tente outra vez!!!");
+        printf("%s Venceu!!!\n", pais2);
     }
     else
     {
-        printf("%s Venceu!!!\n", pais2);
+        printf("Tente outra vez!!!\n");
     }
 
     return 0;
